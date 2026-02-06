@@ -1,34 +1,55 @@
-:root {
-  --bg: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --primary: #6d5df6;
+main {
+  padding-top: 5rem;
 }
 
-.dark-theme {
-  --bg: #000000;
-  --text: #ffffff;
-  --muted: #9ca3af;
-  --card: #111111;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Inter, system-ui, sans-serif;
+.site-footer {
   background: var(--bg);
-  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
 }
 
-section {
-  padding: 6rem 1.5rem;
+.footer-inner {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+.site-footer p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.site-footer a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 700px) {
+  main {
+    padding-top: 6.5rem;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer nav {
+    justify-content: flex-start;
+  }
 }

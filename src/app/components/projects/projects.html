@@ -3,16 +3,23 @@
     <h2 class="title">Projects</h2>
 
     <div class="grid">
-        @for (p of projects; track p.title) {
-        <div class="card">
+      @for (p of projects; track p.title) {
+        <article class="card">
           <h3>{{ p.title }}</h3>
           <p>{{ p.desc }}</p>
+          <div class="tags" aria-label="Project technologies">
+            @for (tag of p.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
           @if (p.github) {
-            <a href="{{ p.github }}" target="_blank">GitHub →</a>
-        }
+            <a href="{{ p.github }}" target="_blank" rel="noreferrer">GitHub -></a>
+          }
+          @if (p.paper) {
+            <a href="{{ p.paper }}" target="_blank" rel="noreferrer">IEEE Paper -></a>
+          }
+        </article>
+      }
     </div>
-  }
-</div>
-
   </div>
 </section>

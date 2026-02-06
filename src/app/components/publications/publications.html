@@ -1,0 +1,21 @@
+<section id="publications">
+  <div class="container">
+    <h2 class="title">Publications</h2>
+
+    <div class="publication-list">
+      @for (publication of publications; track publication.title) {
+        <article class="publication-card">
+          <div>
+            <span class="badge">Published</span>
+            <h3>{{ publication.title }}</h3>
+            <p>{{ publication.venue }}</p>
+            <span class="meta">{{ publication.publisher }} | {{ publication.year }}</span>
+            <span class="doi">DOI: {{ publication.doi }}</span>
+          </div>
+
+          <a href="{{ publication.link }}" target="_blank" rel="noreferrer">View on IEEE -></a>
+        </article>
+      }
+    </div>
+  </div>
+</section>

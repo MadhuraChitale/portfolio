@@ -3,9 +3,9 @@ section {
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
   text-align: center;
-  margin-bottom: 3rem;
+  margin: 0 0 3rem;
 }
 
 .skills-grid {
@@ -16,14 +16,15 @@ section {
 }
 
 .skill-chip {
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  background: rgba(109, 93, 246, 0.12);
-  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--border));
+  color: var(--primary-strong);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 :host-context(.dark-theme) .skill-chip {
-  background: rgba(109, 93, 246, 0.2);
+  color: var(--primary-strong);
 }

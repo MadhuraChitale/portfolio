@@ -1,23 +1,75 @@
 <section id="timeline">
   <div class="container">
-    <h2 class="title">Experience & Education</h2>
+    <h2 class="title">Education & Experience</h2>
 
-    <div class="timeline">
-      @for (item of items; track item.title) {
-        <div class="entry">
-          <div
-            class="dot"
-            [class.education]="item.category === 'education'"
-          ></div>
-
-          <div class="content">
-            <h3>{{ item.title }}</h3>
-            <span class="org">{{ item.org }}</span>
-            <span class="period">{{ item.period }}</span>
-            <p>{{ item.description }}</p>
-          </div>
+    <div class="timeline-sections">
+      <article class="timeline-group education-group">
+        <div class="group-header">
+          <span class="eyebrow">Academic Path</span>
+          <h3>Education</h3>
         </div>
-      }
+
+        <div class="timeline">
+          @for (item of education; track item.title) {
+            <div class="entry">
+              <div class="dot education"></div>
+
+              <div class="content">
+                <div class="item-heading">
+                  @if (item.logo) {
+                    <span class="logo-frame">
+                      <img [src]="item.logo" [alt]="item.org + ' logo'" />
+                    </span>
+                  }
+
+                  <div>
+                    <h4>{{ item.title }}</h4>
+                    <span class="org">{{ item.org }}</span>
+                  </div>
+                </div>
+                <span class="period">{{ item.period }}</span>
+                @if (item.description) {
+                  <p>{{ item.description }}</p>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </article>
+
+      <article class="timeline-group experience-group">
+        <div class="group-header">
+          <span class="eyebrow">Work Timeline</span>
+          <h3>Experience</h3>
+        </div>
+
+        <div class="timeline">
+          @for (item of experience; track item.title) {
+            <div class="entry">
+              <div class="dot experience"></div>
+
+              <div class="content">
+                <div class="item-heading">
+                  @if (item.logo) {
+                    <span class="logo-frame">
+                      <img [src]="item.logo" [alt]="item.org + ' logo'" />
+                    </span>
+                  }
+
+                  <div>
+                    <h4>{{ item.title }}</h4>
+                    <span class="org">{{ item.org }}</span>
+                  </div>
+                </div>
+                <span class="period">{{ item.period }}</span>
+                @if (item.description) {
+                  <p>{{ item.description }}</p>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </article>
     </div>
   </div>
 </section>
