@@ -1,0 +1,23 @@
+<section id="timeline">
+  <div class="container">
+    <h2 class="title">Experience & Education</h2>
+
+    <div class="timeline">
+      @for (item of items; track item.title) {
+        <div class="entry">
+          <div
+            class="dot"
+            [class.education]="item.category === 'education'"
+          ></div>
+
+          <div class="content">
+            <h3>{{ item.title }}</h3>
+            <span class="org">{{ item.org }}</span>
+            <span class="period">{{ item.period }}</span>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
