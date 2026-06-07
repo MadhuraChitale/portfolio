@@ -38,8 +38,8 @@ export class Timeline {
     {
       title: 'SWE Intern',
       org: 'Google',
-      period: 'Incoming',
-      description: 'Incoming Software Engineering Intern.',
+      period: 'May 2026 - Aug 2026',
+      description: 'Software Engineering Intern.',
       logo: 'https://www.google.com/s2/favicons?domain=google.com&sz=128',
     },
     {
